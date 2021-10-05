@@ -2,25 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Vaidation') {
+        stage('package') {
             steps {
-                echo 'Validate Project..'
-		 sh 'mvn validate'
-		 sh 'mvn compile'
-            }
-        }
-        stage('UnitTest') {
-            steps {
-                echo 'Testing..'
-		sh 'mvn test'
-	
-            }
-        }
-              stage('Package') {
-            steps {
-                echo 'build..'
+                echo 'package'
 		sh 'mvn package'
-            }
+		        
         
         }
           
