@@ -7,5 +7,6 @@ pipeline {
               echo 'package...'
 	      sh 'mvn package'
 	    }
-    }
+       }
+   }
 }
