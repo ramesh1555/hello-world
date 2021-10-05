@@ -5,21 +5,21 @@ pipeline {
         stage('Vaidation') {
             steps {
                 echo 'Validate Project..'
-		        sh 'mvn validate'
-		        sh 'mvn compile'
+		 sh 'mvn validate'
+		 sh 'mvn compile'
             }
         }
         stage('UnitTest') {
             steps {
                 echo 'Testing..'
-		        sh 'mvn test'
+		sh 'mvn test'
 	
             }
         }
               stage('Deploy') {
             steps {
                 echo 'Deploying..'
-		        sh 'mvn build'
+		sh 'mvn build'
             }
         
         }
